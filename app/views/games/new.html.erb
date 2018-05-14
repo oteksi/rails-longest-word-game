@@ -1,0 +1,17 @@
+<div class="container">
+
+  <h1>Here we go !</h1>
+
+  <ul>
+  <% @letters.each do |letter| %>
+    <li class="letter"><%= letter %></li>
+  <% end %>
+  </ul>
+
+  <form action="score" method="get">
+    <input name="grid" type="hidden" value=<%= @letters.join%>>
+    <input type="text" name="attempt" placeholder="What the longest world you can find?">
+    <input type="submit" value="Play">
+  </form>
+
+</div>
